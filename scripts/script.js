@@ -27,11 +27,23 @@ function handlerSubmitForm(e) {
     document.getElementById("lastNameError").innerText =
       "Please enter your lastName";
   if (!email)
-    document.getElementById("emailError").innerText="Please enter your email";
+    document.getElementById("emailError").innerText = "Please enter your email";
   if (!subject)
     document.getElementById("subjectError").innerText =
       "Please enter your subject";
   if (!message)
     document.getElementById("messageError").innerText =
       "Please enter your note";
+}
+
+document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
+document.querySelector(".close-navbar").addEventListener("click", closeMenu);
+document.querySelector(".close-navbar-2").addEventListener("click", closeMenu);
+
+function openMenu() {
+  document.getElementById("navbar").className = "navbar-collapse navigation-holder active";
+}
+
+function closeMenu() {
+  document.getElementById("navbar").className = "navbar-collapse navigation-holder";
 }
